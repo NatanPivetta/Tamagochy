@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragment_home">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.tamagochy.fragments.LoginFragment"
+        android:label="FragmentLogin"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.tamagochy.fragments.HomeFragment"
+        android:label="@string/meus_pets"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_login"
+            app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_addPet"
+            app:destination="@id/fragment_add_pet" />
+        <action
+            android:id="@+id/menu_action_logout"
+            app:destination="@id/fragment_login"
+            />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_editPet"
+            app:destination="@id/fragment_edit_pet"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_edit_pet"
+        android:name="com.tamagochy.fragments.EditPetFragment"
+        android:label="@string/editar_pet"
+        tools:layout="@layout/fragment_edit_pet" />
+
+
+    <fragment
+        android:id="@+id/fragment_add_pet"
+        android:name="com.tamagochy.fragments.AddPetFragment"
+        android:label="@string/adicionar_pet"
+        tools:layout="@layout/fragment_add_pet">
+        <action
+            android:id="@+id/action_fragment_addPet_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_about"
+        android:name="com.tamagochy.fragments.AboutFragment"
+        android:label="Sobre"
+        tools:layout="@layout/fragment_about">
+    </fragment>
+
+
+</navigation>

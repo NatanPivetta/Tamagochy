@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:background="@color/cream_100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Imagem do Pet -->
+        <ImageView
+            android:id="@+id/image_pet"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pet_placeholder" />
+
+        <!-- Informações do Pet -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="top">
+
+            <!-- Nome do Pet -->
+            <TextView
+                android:id="@+id/text_pet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pet_name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/blue"/>
+
+            <TextView
+                android:id="@+id/text_pet_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pet_code"
+                android:textStyle="bold"
+                />
+
+            <!-- Data e Hora da Última Refeição -->
+            <TextView
+                android:id="@+id/text_last_meal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Última refeição: 01/12/2024 15:30"
+                android:textSize="14sp"
+                android:textColor="@color/blue_300"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Botões de Ação -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_marginTop="4dp">
+
+                <!-- Botão Alimentar -->
+                <Button
+                    android:id="@+id/button_feed_pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/alimentar"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/cream_100"
+                    android:elevation="8dp"
+
+                    />
+
+                <!-- Botão Editar -->
+                <Button
+                    android:id="@+id/button_edit_pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/editar"
+                    android:textSize="16sp"
+                    android:textColor="@color/blue"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/cream_100"
+                    android:elevation="8dp"
+                    />
+
+                <!-- Botão Excluir -->
+                <Button
+                    android:id="@+id/button_delete_pet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/excluir"
+                    android:textSize="14sp"
+                    android:textColor="@color/red_700"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:backgroundTint="@color/cream_100"
+                    android:elevation="8dp"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "822084388765",
+    "firebase_url": "https://tamagochi-4469f-default-rtdb.firebaseio.com",
+    "project_id": "tamagochi-4469f",
+    "storage_bucket": "tamagochi-4469f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822084388765:android:a288e22bda5761f6125174",
+        "android_client_info": {
+          "package_name": "com.tamagochi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822084388765-pknf13dvoh41mh5p4asuaqvi1beusfja.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tamagochi",
+            "certificate_hash": "357bca99fb3763d5deb336ffdf4e3191d772d631"
+          }
+        },
+        {
+          "client_id": "822084388765-pov08rpt28kuvj373lrc3qkglrdsm1re.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tamagochi",
+            "certificate_hash": "d1e7f136d833b780db415d112711972998410064"
+          }
+        },
+        {
+          "client_id": "822084388765-cnvo2cbaa4p4esiktet4r5g914b64c0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrtFZSBCfkg4WpMBjrOsQlHkNNxnZfgR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822084388765-cnvo2cbaa4p4esiktet4r5g914b64c0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822084388765:android:398936b8ca968122125174",
+        "android_client_info": {
+          "package_name": "com.tamagochy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822084388765-cnvo2cbaa4p4esiktet4r5g914b64c0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrtFZSBCfkg4WpMBjrOsQlHkNNxnZfgR4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822084388765-cnvo2cbaa4p4esiktet4r5g914b64c0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
