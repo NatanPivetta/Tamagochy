@@ -1,8 +1,13 @@
 package com.tamagochy;
 
+<<<<<<< HEAD
 import com.tamagochy.fragments.HomeFragment;
 import com.tamagochy.interfaces.LogoutListener;
 
+=======
+import com.tamagochy.interfaces.LogoutListener;
+import android.content.DialogInterface;
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -11,10 +16,18 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+<<<<<<< HEAD
+=======
+import androidx.appcompat.app.AlertDialog;
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+<<<<<<< HEAD
+=======
+import androidx.fragment.app.Fragment;
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -26,11 +39,22 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+<<<<<<< HEAD
 import com.google.android.material.navigation.NavigationView;
+=======
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.Firebase;
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.tamagochy.databinding.ActivityMainBinding;
 
+<<<<<<< HEAD
+=======
+import org.w3c.dom.Text;
+
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 
 public class MainActivity extends AppCompatActivity {
 
@@ -84,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
 
                     return true;
                 }
+<<<<<<< HEAD
                 else if (id == R.id.menu_action_about) {
                     navController.navigate(R.id.fragment_about);
                     drawer.closeDrawer(GravityCompat.START);
@@ -94,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
                     drawer.closeDrawer(GravityCompat.START);
                     return true;
                 }
+=======
+                // ... outros itens do menu
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 
                 return false;
             }
@@ -157,12 +185,17 @@ public class MainActivity extends AppCompatActivity {
         }else if(item.getItemId() == R.id.fragment_add_pet) {
             Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.action_fragment_home_to_fragment_addPet);
             return true;
+<<<<<<< HEAD
         } else if (item.getItemId() == R.id.fragment_about) {
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.fragment_about);
                 return true;
             }
 
         else {
+=======
+
+        }else{
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
             return super.onOptionsItemSelected(item);
             }
 

@@ -4,7 +4,11 @@
     <item
         android:id="@+id/fragment_add_pet"
         android:title="@string/cadastrar"
+<<<<<<< HEAD
         android:name="com.tamagochy.fragments.AddPetFragment"
+=======
+        android:name="com.tamagochy.AddPetFragment"
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
         android:icon="@drawable/ic_cad"
         tools:layout="@layout/fragment_add_pet"/>
 
@@ -12,6 +16,7 @@
     <item
         android:id="@+id/fragment_login"
         android:title="@string/log_out"
+<<<<<<< HEAD
         android:name="com.tamagochy.fragments.LoginFragment"
         android:icon="@drawable/baseline_logout_24"
         tools:layout="@layout/fragment_login"
@@ -24,4 +29,10 @@
         android:icon="@drawable/baseline_logout_24"
         tools:layout="@layout/fragment_about"
         />
+=======
+        android:name="com.tamagochy.LoginFragment"
+        android:icon="@drawable/baseline_logout_24"
+        tools:layout="@layout/fragment_login"
+        />
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 </menu>

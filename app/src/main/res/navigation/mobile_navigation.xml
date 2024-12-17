@@ -8,7 +8,11 @@
     <!-- Login Fragment -->
     <fragment
         android:id="@+id/fragment_login"
+<<<<<<< HEAD
         android:name="com.tamagochy.fragments.LoginFragment"
+=======
+        android:name="com.tamagochy.LoginFragment"
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
         android:label="FragmentLogin"
         tools:layout="@layout/fragment_login">
         <action
@@ -19,7 +23,11 @@
     <!-- Home Fragment -->
     <fragment
         android:id="@+id/fragment_home"
+<<<<<<< HEAD
         android:name="com.tamagochy.fragments.HomeFragment"
+=======
+        android:name="com.tamagochy.HomeFragment"
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
         android:label="@string/meus_pets"
         tools:layout="@layout/fragment_home">
         <action
@@ -41,14 +49,22 @@
 
     <fragment
         android:id="@+id/fragment_edit_pet"
+<<<<<<< HEAD
         android:name="com.tamagochy.fragments.EditPetFragment"
+=======
+        android:name="com.tamagochy.EditPetFragment"
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
         android:label="@string/editar_pet"
         tools:layout="@layout/fragment_edit_pet" />
 
 
     <fragment
         android:id="@+id/fragment_add_pet"
+<<<<<<< HEAD
         android:name="com.tamagochy.fragments.AddPetFragment"
+=======
+        android:name="com.tamagochy.AddPetFragment"
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
         android:label="@string/adicionar_pet"
         tools:layout="@layout/fragment_add_pet">
         <action
@@ -56,6 +72,7 @@
             app:destination="@id/fragment_home" />
     </fragment>
 
+<<<<<<< HEAD
     <fragment
         android:id="@+id/fragment_about"
         android:name="com.tamagochy.fragments.AboutFragment"
@@ -63,5 +80,7 @@
         tools:layout="@layout/fragment_about">
     </fragment>
 
+=======
+>>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 
 </navigation>
