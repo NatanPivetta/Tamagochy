@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -25,6 +26,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.tamagochy.adapter.PetAdapter;
 import com.tamagochy.databinding.FragmentHomeBinding;
+import com.tamagochy.interfaces.LogoutListener;
 import com.tamagochy.model.Pet;
 
 import java.util.ArrayList;
@@ -32,7 +34,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements LogoutListener {
 
     private FragmentHomeBinding binding;
     @Override
@@ -169,12 +171,20 @@ public class HomeFragment extends Fragment {
     }
 
 
+
+
+    @Override
+    public void onLogout() {
+        // Navegar para a página de login
+        Navigation.findNavController(requireView()).navigate(R.id.action_fragment_home_to_fragment_login);
+    }
+
     private void navigateToAddFragment(View view) {
         NavController navController = Navigation.findNavController(binding.getRoot());
         navController.navigate(R.id.fragment_add_pet); // Use the action ID from your navigation graph
     }
 
-    private void navigateToLoginFragment() {
+    public void navigateToLoginFragment() {
         NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
         navController.navigate(R.id.fragment_login);
     }

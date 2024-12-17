@@ -1,5 +1,6 @@
 package com.tamagochy;
 
+import com.tamagochy.interfaces.LogoutListener;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
+    private LogoutListener logoutListener;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private ActivityMainBinding binding;
@@ -55,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         userName = "";
         userEmail = "";
 
+        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+        HomeFragment homeFragment = (HomeFragment) navHostFragment.getChildFragmentManager().getFragments().get(0);
+        logoutListener = homeFragment;
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -69,6 +74,26 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
 
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+
+                if (id == R.id.menu_action_logout) {
+                    Log.d("DRAWER MENU", "LOGOUT TRIGGERED");
+                    logout(); // Chama a mesma função de logout da toolbar
+                    if(logoutListener != null){
+                        drawer.closeDrawer(GravityCompat.START);
+                        homeFragment.navigateToLoginFragment();
+                    }
+
+                    return true;
+                }
+                // ... outros itens do menu
+
+                return false;
+            }
+        });
 
        // BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNav);
         // NavigationUI.setupWithNavController(bottomNavigationView,Navigation.findNavController(this, R.id.nav_host_fragment));
@@ -155,8 +180,16 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    private void navigateToLogin() {
-            navController.navigate(R.id.fragment_home);
+    private void logout() {
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                .requestEmail()
+                .build();
+        GoogleSignInClient googleSignInClient = GoogleSignIn.getClient(this, gso);
+        googleSignInClient.revokeAccess();
+        FirebaseAuth.getInstance().signOut();
     }
+
+
 }
 

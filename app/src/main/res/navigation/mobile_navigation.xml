@@ -44,11 +44,5 @@
             app:destination="@id/fragment_home" />
     </fragment>
 
-    <fragment
-        android:id="@+id/menu_action_logout"
-        android:name="com.tamagochy.LoginFragment"
-        android:label="@string/log_out"
-        tools:layout="@layout/fragment_login" />
-
 
 </navigation>
