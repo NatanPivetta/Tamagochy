@@ -6,11 +6,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-<<<<<<< HEAD
     tools:context=".fragments.AddPetFragment">
-=======
-    tools:context=".AddPetFragment">
->>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 
     <ImageView
         android:id="@+id/imageViewPet"

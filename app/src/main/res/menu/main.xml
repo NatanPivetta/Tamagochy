@@ -17,7 +17,6 @@
         android:icon="@drawable/ic_cad"
         tools:layout="@layout/fragment_add_pet"/>
 
-<<<<<<< HEAD
     <item
         android:id="@+id/fragment_about"
         android:title="@string/sobre"
@@ -26,6 +25,4 @@
         tools:layout="@layout/fragment_about"
         />
 
-=======
->>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 </menu>

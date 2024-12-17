@@ -4,11 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
     tools:context=".fragments.HomeFragment">
-=======
-    tools:context=".HomeFragment">
->>>>>>> 375c225ae1760634ed51b8d9fb565156dc856d00
 
     <!-- RecyclerView para listar os pets -->
 
