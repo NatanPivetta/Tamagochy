@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/fragment_home">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/fragment_login"
+        android:name="com.tamagochy.LoginFragment"
+        android:label="FragmentLogin"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_fragment_login_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.tamagochy.HomeFragment"
+        android:label="@string/fragmentHome"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_login"
+            app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_addPet"
+            app:destination="@id/fragment_add_pet" />
+        <action
+            android:id="@+id/menu_action_logout"
+            app:destination="@id/fragment_login"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_add_pet"
+        android:name="com.tamagochy.AddPetFragment"
+        android:label="@string/adicionar_pet"
+        tools:layout="@layout/fragment_add_pet">
+        <action
+            android:id="@+id/action_fragment_addPet_to_fragment_home"
+            app:destination="@id/fragment_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menu_action_logout"
+        android:name="com.tamagochy.LoginFragment"
+        android:label="@string/log_out"
+        tools:layout="@layout/fragment_login" />
+
+
+</navigation>

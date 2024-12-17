@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/fragment_add_pet"
+        android:title="@string/cadastrar"
+        android:name="com.tamagochy.AddPetFragment"
+        android:icon="@drawable/ic_cad"
+        tools:layout="@layout/fragment_add_pet"/>
+
+
+    <item
+        android:id="@+id/fragment_login"
+        android:title="@string/log_out"
+        android:name="com.tamagochy.LoginFragment"
+        android:icon="@drawable/baseline_logout_24"
+        tools:layout="@layout/fragment_login"
+        />
+</menu>

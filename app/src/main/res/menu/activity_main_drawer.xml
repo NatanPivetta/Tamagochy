@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/fragment_home"
+            android:icon="@drawable/pets_24px"
+            android:title="@string/fragmentHome"
+            android:actionLayout="@layout/fragment_home"/>
+        <item
+            android:id="@+id/fragment_add_pet"
+            android:icon="@drawable/baseline_add_48"
+            android:title="@string/adicionar_pet" />
+
+        <item
+            android:id="@+id/fragment_login"
+            android:icon="@drawable/baseline_logout_24"
+            android:title="@string/log_out"
+            android:actionLayout="@layout/fragment_login"/>
+
+
+    </group>
+
+</menu>
