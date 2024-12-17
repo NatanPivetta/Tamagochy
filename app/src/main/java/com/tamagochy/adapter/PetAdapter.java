@@ -118,7 +118,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
             petBundle.putString("petImageUrl", pet.getImageUrl());
 
             NavController navController = Navigation.findNavController(v);
-            navController.navigate(R.id.action_fragment_home_to_fragment_login, petBundle);
+            navController.navigate(R.id.action_fragment_home_to_fragment_editPet, petBundle);
         });
     }
 

@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/fragment_home"
         android:name="com.tamagochy.HomeFragment"
-        android:label="@string/fragmentHome"
+        android:label="@string/meus_pets"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_fragment_home_to_fragment_login"
@@ -32,7 +32,19 @@
             android:id="@+id/menu_action_logout"
             app:destination="@id/fragment_login"
             />
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_editPet"
+            app:destination="@id/fragment_edit_pet"
+            />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/fragment_edit_pet"
+        android:name="com.tamagochy.EditPetFragment"
+        android:label="@string/editar_pet"
+        tools:layout="@layout/fragment_edit_pet" />
+
 
     <fragment
         android:id="@+id/fragment_add_pet"
